@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Rocket, Star, Globe } from "lucide-react";
+import SpaceBackground from "@/components/SpaceBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-blue-900 text-white">
+    <div className="min-h-screen text-white relative overflow-hidden">
+      <SpaceBackground />
+      <div className="relative z-10">
       <header className="container mx-auto py-16 text-center">
         <h1 className="text-5xl font-bold mb-4">Explore the Cosmos</h1>
         <p className="text-xl mb-8">Embark on a journey through the wonders of space</p>
@@ -48,9 +51,10 @@ const Index = () => {
         </section>
       </main>
 
-      <footer className="bg-black bg-opacity-50 py-8 text-center">
+      <footer className="bg-black bg-opacity-30 py-8 text-center relative z-10">
         <p>&copy; 2024 Cosmic Explorers. All rights reserved.</p>
       </footer>
+      </div>
     </div>
   );
 };
